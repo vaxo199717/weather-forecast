@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/307e3dac6d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <script src="app.js" async></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <div class="container">
+        <div class="search-bar">
+            <input class="inputForCities" type="text" placeholder="Enter city or country">
+            <button class="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header">
+            <div class="dropdown">
+                <button id="dropBtn" class="dropdown-btn">
+                    <i class="fas fa-map-marked-alt"></i>
+                </button>
+            </div>
+            <div class="city-name">
+                <h2 class="name"></h2>
+            </div>
+            <div class="settings">
+                <button id="settingsBtn" class="settings-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="weather-display">
+            <div class="weather-image">
+
+            </div>
+            <div class="main-info">
+                <p class="degrees"></p>
+                <p class="status"></p>
+            </div>
+            <div class="max-min">
+                <p class="degrees-range"></p>
+                &nbsp;
+                &nbsp;
+                <p class="local-time"></p>
+            </div>
+            <p class="hourly-weather">hourly weather</p>
+            <div class="full-day">
+            </div>
+            <p class="weather-details">weather details</p>
+            <div class="additional-info">
+                <div>
+                    <h3 id="feels-like"></h3>
+                    <p>Feels like</p>
+                </div>
+                <div>
+                    <h3 id="visibility"></h3>
+                    <p>Visibility</p>
+                </div>
+                <div>
+                    <h3 id="air-pressure"></h3>
+                    <p>Air pressure</p>
+                </div>
+                <div>
+                    <h3 id="uv"></h3>
+                    <p>UV</p>
+                </div>
+                <div>
+                    <h3 id="humidity">24%</h3>
+                    <p>Humidity</p>
+                </div>
+                <div>
+                    <h3 id="wind-speed">24km/h</h3>
+                    <p>NW wind</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- <input id="input" type="text" placeholder="ჩაწერეთ ქალაქის სახელი">
+        <button id="btn">search</button>
+        <div class="weather-container">
+            <h2 class="city-name"></h2>
+            <h2 class="region"></h2>
+            <h2 class="country"></h2>
+            <h2 class="time"></h2>
+            <h2 class="condition"></h2>
+           <h2 class="image"></h2>
+        </div> -->

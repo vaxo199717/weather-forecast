@@ -1,0 +1,188 @@
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Kanit', sans-serif;
+}
+@mixin buttonStyle{
+    background-color: transparent;
+    border:none;
+    font-size: 25px;
+    width: 40px;
+    height: 38px;
+    color: white;
+    outline:none;
+    cursor:pointer;
+}
+@mixin titleStyle {
+    font-weight: bolder;
+    margin-top: 10px;
+    text-align: center;
+}
+body{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,151,255,1) 85%);
+    backdrop-filter: blur(5px);
+}
+.container{
+    width: 400px;
+    background: #0097ff;
+    background: linear-gradient(180deg, #0097ff 0%, rgba(255,255,255,1) 85%);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 10px 15px 0 rgb(114, 114, 114);
+    .search-bar{
+        display:none;
+        justify-content: center;
+        padding-top: 5px;
+        .inputForCities{
+            height: 40px;
+            width: 85%;
+            font-size: 15px;
+            outline:none;
+            padding:0;
+            background:white;
+            border:none;
+        }
+        .searchBtn{
+            width: 40px;
+            height: 40px;
+            background:rgb(0, 124, 207);
+            font-size: 20px;
+            cursor:pointer;
+            outline:none;
+            border:none;
+        }
+    }
+    .header{
+        display:flex;
+        .dropdown{
+            width: 10%;
+            .dropdown-btn{
+                @include buttonStyle;
+            }
+        }
+        .city-name{
+            width: 80%;
+            .name{
+                text-align: center;
+                font-size: 30px;
+                color: white;
+            }
+        }
+        .settings{
+            width: 10%;
+            .settings-btn{
+                @include buttonStyle;
+            }
+        }
+
+
+    }
+
+    .weather-display{
+        .weather-image{
+            display:flex;
+            justify-content: center;
+
+            .dynamic-image{
+                width: 200px;
+            }
+        }
+        .main-info{
+
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+            .degrees{
+                padding:0 0 0 20px;
+                width: 50%;
+                font-size: 35px;
+            }
+            .status{
+                width: 50%;
+                text-align: right;
+                padding: 0 20px 0 0;
+                font-size: 25px;
+
+            }
+        }
+        .max-min{
+            padding-left: 20px;
+            display:flex;
+            align-items: center;
+        }
+        .full-day{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .hour{
+                width: 25%;
+                div{
+                    text-align: center;
+                }
+            }
+        }
+        .hourly-weather{
+            @include titleStyle;
+        }
+        .weather-details{
+            @include titleStyle;
+        }
+        .additional-info{
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            div{
+                width: 32%;
+                h3{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+            
+        }
+    }
+}
+.loader-container{
+    background: #0097ff;
+    background: linear-gradient(180deg, #0097ff 0%, rgba(255,255,255,1) 85%);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 634.2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lds-dual-ring {
+
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: rgb(255, 255, 255) transparent rgb(255, 255, 255) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

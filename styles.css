@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(85%, #0097ff));
+  background: linear-gradient(180deg, white 0%, #0097ff 85%);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.container {
+  width: 400px;
+  background: #0097ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0097ff), color-stop(85%, white));
+  background: linear-gradient(180deg, #0097ff 0%, white 85%);
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 5px 10px 15px 0 #727272;
+          box-shadow: 5px 10px 15px 0 #727272;
+}
+
+.container .search-bar {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5px;
+}
+
+.container .search-bar .inputForCities {
+  height: 40px;
+  width: 85%;
+  font-size: 15px;
+  outline: none;
+  padding: 0;
+  background: white;
+  border: none;
+}
+
+.container .search-bar .searchBtn {
+  width: 40px;
+  height: 40px;
+  background: #007ccf;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .header .dropdown {
+  width: 10%;
+}
+
+.container .header .dropdown .dropdown-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  width: 40px;
+  height: 38px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.container .header .city-name {
+  width: 80%;
+}
+
+.container .header .city-name .name {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.container .header .settings {
+  width: 10%;
+}
+
+.container .header .settings .settings-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  width: 40px;
+  height: 38px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.container .weather-display .weather-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .weather-display .weather-image .dynamic-image {
+  width: 200px;
+}
+
+.container .weather-display .main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .weather-display .main-info .degrees {
+  padding: 0 0 0 20px;
+  width: 50%;
+  font-size: 35px;
+}
+
+.container .weather-display .main-info .status {
+  width: 50%;
+  text-align: right;
+  padding: 0 20px 0 0;
+  font-size: 25px;
+}
+
+.container .weather-display .max-min {
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .weather-display .full-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .weather-display .full-day .hour {
+  width: 25%;
+}
+
+.container .weather-display .full-day .hour div {
+  text-align: center;
+}
+
+.container .weather-display .hourly-weather {
+  font-weight: bolder;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.container .weather-display .weather-details {
+  font-weight: bolder;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.container .weather-display .additional-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .weather-display .additional-info div {
+  width: 32%;
+}
+
+.container .weather-display .additional-info div h3 {
+  text-align: center;
+}
+
+.container .weather-display .additional-info div p {
+  text-align: center;
+}
+
+.loader-container {
+  background: #0097ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0097ff), color-stop(85%, white));
+  background: linear-gradient(180deg, #0097ff 0%, white 85%);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 634.2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lds-dual-ring {
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: white transparent white transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
