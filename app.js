@@ -58,7 +58,7 @@ function displayElements() {
 
 // get and output weather info
 function weatherData(city) {
-    let currentWeatherUrl = 'http://api.weatherapi.com/v1/forecast.json?key=16a4770361204d6095b110641210305&q=' + city + '&days=10&aqi=no&alerts=no';
+    let currentWeatherUrl = 'https://api.weatherapi.com/v1/forecast.json?key=16a4770361204d6095b110641210305&q=' + city + '&days=10&aqi=no&alerts=no';
     fetch(currentWeatherUrl)
         .then(response => response.json())
         .then(data => {
